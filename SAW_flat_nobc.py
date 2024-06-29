@@ -1,16 +1,3 @@
-#!/usr/bin/env python3
-
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=72
-#SBATCH --mem-per-cpu=1G
-#SBATCH --mail-user=sander.desmedt@student.kuleuven.be
-#SBATCH --mail-type=BEGIN
-#SBATCH --mail-type=END
-#SBATCH --mail-type=FAIL
-#SBATCH --mail-type=REQUEUE
-#SBATCH --mail-type=ALL
-
 import numpy as np
 #import scipy as sc
 #import matplotlib.pyplot as plt
