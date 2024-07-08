@@ -4193,8 +4193,7 @@ Cell[BoxData[
   RowBox[{"Table", "[", 
    RowBox[{
     RowBox[{
-    "\"\</home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/notes/\
-data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_\>\"", "<>", 
+    "Path to where the file needs to be saved", "<>", 
      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.txt\>\""}], ",", " ", 
     RowBox[{"{", 
      RowBox[{"i", ",", "21", ",", "40"}], "}"}]}], "]"}]}]], "Input",
@@ -4210,46 +4209,7 @@ mZ51IFrubyCYFqnSU48E0iskxbRBdMv7mEgQ/eVgUTSIBgAM1p7p
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_21.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_22.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_23.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_24.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_25.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_26.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_27.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_28.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_29.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_30.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_31.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_32.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_33.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_34.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_35.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_36.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_37.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_38.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_39.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_adjacency_flatnobc_40.txt\"\>"}], 
+  RowBox[{""}], 
   "}"}]], "Output",
  CellChangeTimes->{
   3.925184565630082*^9, 3.9251861015479307`*^9, 3.925186242168668*^9, 
@@ -4276,8 +4236,7 @@ Cell[BoxData[
   RowBox[{"Table", "[", 
    RowBox[{
     RowBox[{
-    "\"\</home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/notes/\
-data_lowT/data_flat_nobc/lowT_curvature_flatnobc_\>\"", "<>", 
+    "Path to where the file needs to be saved", "<>", 
      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.txt\>\""}], ",", " ", 
     RowBox[{"{", 
      RowBox[{"i", ",", "21", ",", "40"}], "}"}]}], "]"}]}]], "Input",
@@ -4299,46 +4258,7 @@ data_lowT/data_flat_nobc/lowT_curvature_flatnobc_\>\"", "<>",
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_21.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_22.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_23.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_24.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_25.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_26.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_27.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_28.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_29.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_30.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_31.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_32.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_33.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_34.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_35.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_36.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_37.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_38.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_39.txt\"\>", 
-   ",", "\<\"/home/sander/Documents/School/univ/Fysica/master/fase_3/thesis/\
-notes/data_lowT/data_flat_nobc/lowT_curvature_flatnobc_40.txt\"\>"}], 
+  RowBox[{""}], 
   "}"}]], "Output",
  CellChangeTimes->{
   3.925186955437207*^9, 3.925186996059958*^9, 3.925187537890407*^9, {
