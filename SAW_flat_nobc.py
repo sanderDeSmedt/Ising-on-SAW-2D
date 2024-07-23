@@ -279,21 +279,6 @@ def metropol_saw(spinsl,sweeps,T,xl,yl):
         activity = i
         possible, positions = correct_x(xl,yl,i,spinsl)
         if possible:
-            '''if i == 0 or i == len(x)-1:
-                x2 = x.copy()
-                y2 = y.copy()
-                config2 = config.copy()
-                E_i = 2*energy(config,n,x_pos,y_pos)
-                config = metropolis_saw_move(i)
-                E_f = 2*energy(config,n,x_pos,y_pos)
-                ΔE = E_f-E_i
-                r = np.random.uniform()
-                if not(ΔE <=0 or r<= np.exp(-β*ΔE/2)):
-                    #print('accepted')
-                    x = x2.copy()
-                    y = y2.copy()
-                    spins = spins2.copy()
-            else:'''
             E_i = energy(spinsl,n,x_pos,y_pos)
             #config_copy = metropolis_saw_move(i)
             spinsl,xl,yl = metropolis_saw_move(i,xl,yl,spinsl)
@@ -303,7 +288,7 @@ def metropol_saw(spinsl,sweeps,T,xl,yl):
             E_f = energy(spinsl,n,xl[i],yl[i])
             ΔE = E_f-E_i
             r = np.random.uniform()
-            if not(ΔE <=0 or r<= np.exp(-β*ΔE/2)):
+            if not(ΔE <=0 or r<= np.exp(-β*ΔE)):
                 #print('accepted')
                 spinsl,xl,yl = metropolis_saw_move(i,xl,yl,spinsl)
                 activity = -1
@@ -473,7 +458,6 @@ for j in range(21):
     formatted_string_file_1 = string_file_1.format(j)
     T=2
     steps = 10**3
-    #"/home/sander/Documents/Wolfram Mathematica/adjacency_curved_h15bc.txt"
     file1 = open(formatted_string_file_1, 'w')
     mag_after, energy_after, length_x, length_y, number_regions, energy_1d, activity= [] ,[],[],[], [], [], []
     poss = []
