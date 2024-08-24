@@ -22,7 +22,6 @@ def create_initial(rows, cols):
 def saw(n):
     x, y = [n], [n]
     positions = set([(n,n)])  #positions is a set that stores all sites visited by the walk
-    #stuck = False
     for i in range(n-1):
         directions = [(1,0), (0,1), (-1,0), (0,-1)]
         directions_feasible = []  #directions_feasible stores the available directions
@@ -35,12 +34,8 @@ def saw(n):
             x.append(x[-1] + dx)
             y.append(y[-1] + dy)
         else:  #in that case the walk is stuck
-            #stuck = True
-            #steps = i+1
             break  #terminate the walk prematurely
-        #steps = n+1
-    #print(positions)
-    return x, y #, stuck, steps
+    return x, y
 
 def free_list(positions_list, spin_array):
     for i in range(1,-1,-1):
@@ -161,6 +156,7 @@ def energy(spin_array, N, x_pos ,y_pos):
 
 def total_energy(spin_array,N,x,y):
     spin_list = merge_lists(x,y)
+    # other (longer) way to calculate the energy used as a check 
     '''sum_energy = 0
     for i in range(len(spin_list)):
         print("position: ",spin_list[i][0],spin_list[i][1])
@@ -205,9 +201,6 @@ def find_possible_points(x,y,spins):
         possible, positions = correct_x(x,y,i,spins)
         if possible:
             possible_points.append(i) #test: [x[i],y[i],i]
-    '''possible, positions = correct_x(x,y,len(x)-1, spins)
-    if posible:
-        possible_points.append(len(x)-1)'''
     if len(possible_points) ==0:
         raise ValueError('list of possible points must be non-empty, the SAW cannot move.')
     return possible_points
@@ -230,11 +223,8 @@ def energy_ising_1d(spin_list):
     sum_energy = 0
     for i in range(1,len(spin_list)-1):
         sum_energy += -J*spin_list[i]*(spin_list[i-1]+spin_list[i+1])
-        #print(sum_energy)
     sum_energy += -h*sum(spin_list)
-    #print(sum_energy)
     sum_energy += -K*(len(spin_list)-2)
-    #print(sum_energy)
     return sum_energy
 
 def metropol_spin(spinsl,sweeps,T,xl,yl):
@@ -242,14 +232,10 @@ def metropol_spin(spinsl,sweeps,T,xl,yl):
     mag = 0#np.zeros(sweeps)
     Energy = 0#np.zeros(sweeps)
     for sweep in range(sweeps):
-        #config_copy = config.copy()
         i = np.random.randint(0,len(xl))
         x_pos = xl[i] #np.random.randint(0,99)
         y_pos = yl[i] #np.random.randint(0,99)
         E_i = 2*energy(spins,n,x_pos,y_pos)
-        #config[x_pos][y_pos] = - config[x_pos][y_pos]
-        #E_i = energy(config,n,x_pos,y_pos)
-        #E_f = total_energy(config,n,x,y)
         ΔE = -E_i #E_f-E_i
         r = np.random.uniform()
         if ΔE <=0 or r<= np.exp(-β*ΔE):
@@ -328,12 +314,11 @@ def metropolis_combo(spinsl,sweeps,T,xl,yl):
     # random choice of either a spin or saw move
     magnetization = np.zeros(sweeps)
     energy_saw = np.zeros(sweeps)
-    #spins_copy = np.zeros(sweeps)
     length_x = np.zeros(sweeps)
     length_y = np.zeros(sweeps)
     activity = []
     possp = []
-    #energy_1d = np.zeros(sweeps)
+    # the loop is equiped with the code to 'reset' one of the subsystems, i.e. the spin subsystem.
     for sweep in range(sweeps):
         if np.random.randint(0,2) == 0: #spin move
         #    if sweep%(5*10**2)==0:
@@ -346,6 +331,7 @@ def metropolis_combo(spinsl,sweeps,T,xl,yl):
             length_x[sweep] = max(x)-min(x)
             length_y[sweep] = max(y)-min(y)
             spinsl,xl,yl = temp_var[0], temp_var[3], temp_var[4]
+            # 1D energy to be used as comparison to the actual energy
             #energy_1d[sweep] = energy_ising_1d(spins_1dising(spins,x,y))
         else: # path change
         #    if sweep%(5*10**2)==0:
@@ -434,9 +420,11 @@ spins_1d = spins_1dising(spins,x,y)
 #print(spins)
 #print(config_initial)
 #print(dummy)
+'''POSSIBILITY FOR THE SPIN CONFIGURATION TO BECOME ALTERNATING'''
 for i in range(len(x)):
     spins[x[i]][y[i]] = (-1)**i
 spins_1d = spins_1dising(spins,x,y)
+
 #config_initial[x[0]][y[0]] = 1
 #config_initial[x[-1]][y[-1]] = 1
 #spins_1d = spins_1dising(spins,x,y)
@@ -448,7 +436,7 @@ plus_spin, min_spin = plus_min(spins)
 #min_spin
 #plus_spin_x, plus_spin_y = zip(*plus_spin)
 #min_spin_x, min_spin_y = zip(*min_spin)
-
+'''ACTUAL SIMULATION (POSSIBLE TO USE TIME INTERVALS)'''
 for j in range(21):
     print(j)
     spins = spins_original.copy()
@@ -485,8 +473,10 @@ for j in range(21):
         #figure(i)
         temp_var = print_useful(create_adjacency(spins,N,x,y))
         #print(temp_var)
+        # write the adjacency matrix to a file, this way it can be used to calculate the OR-curvature of the SAW at htis moment in time.
         file1.write(str(temp_var))
         file1.write("\n")
+    # write all variables to files 
     number_regions.append(region_counter(spins,x,y))
     energy_1d.append(energy_ising_1d(spins_1dising(spins,x,y)))
     file1.close()
