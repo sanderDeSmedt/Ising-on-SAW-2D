@@ -473,7 +473,7 @@ for j in range(21):
         #figure(i)
         temp_var = print_useful(create_adjacency(spins,N,x,y))
         #print(temp_var)
-        # write the adjacency matrix to a file, this way it can be used to calculate the OR-curvature of the SAW at htis moment in time.
+        # write the adjacency matrix to a file, this way it can be used to calculate the OR-curvature of the SAW at this moment in time.
         file1.write(str(temp_var))
         file1.write("\n")
     # write all variables to files 
